@@ -54,9 +54,9 @@ fun NumberGuessingGameLayout() {
             text = stringResource(R.string.guess_number),
             modifier = Modifier
                 .padding(bottom = 16.dp)
-                .align(alignment = Alignment.Start),
+                .align(alignment = Alignment.CenterHorizontally),
             style = TextStyle(
-                fontSize = 32.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Bold
             )
         )
@@ -130,7 +130,7 @@ fun NumberGuessingGameLayout() {
         }
         Text(
             text = message,
-            style = MaterialTheme.typography.displaySmall
+            style = MaterialTheme.typography.labelMedium
         )
         Spacer(modifier = Modifier.height(150.dp))
     }
