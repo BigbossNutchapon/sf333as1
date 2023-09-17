@@ -14,7 +14,7 @@ You can watch a video demo of the game [here](https://github.com/BigbossNutchapo
 ## Picture Demo
 ![pic_demo](https://github.com/BigbossNutchapon/sf333as1/assets/88434297/809c7a8d-aa09-4942-abd9-37d0de0ce331)
 
-## Requirements (Thai)
+## Requirements
 
 โปรแกรมเกมมีความสามารถดังนี้:
 
