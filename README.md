@@ -1,6 +1,6 @@
 # Number Guessing Game in Kotlin using Jetpack Compose
 
-This Android application is a simple number guessing game developed in Kotlin and Jetpack Compose. The game allows players to input a number and provides feedback on whether the guess is correct, higher, or lower than the target number. It also keeps track of the number of attempts made by the player and allows them to start a new game.
+This Android application is a straightforward number guessing game built with Kotlin and Jetpack Compose. In this game, players enter a number and receive feedback on whether their guess is correct, higher, or lower than the target number, which ranges from 1 to 1000. The game keeps track of the player's attempts and allows them to start a new game whenever they wish.
 
 ## Team Members
 
