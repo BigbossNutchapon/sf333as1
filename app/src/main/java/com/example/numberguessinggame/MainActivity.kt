@@ -122,7 +122,6 @@ fun NumberGuessingGameLayout() {
                             }
                             else -> {
                                 isGameOver = true
-                                correctGuesses++
                                 "Congratulations! You guessed it!"
                             }
                         }
