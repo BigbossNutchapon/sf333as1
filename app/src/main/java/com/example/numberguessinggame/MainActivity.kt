@@ -53,6 +53,8 @@ fun NumberGuessingGameLayout() {
     var isGameOver by remember { mutableStateOf(false) }
     val randomNumber = remember { mutableStateOf(Random.nextInt(1, 1001)) }
     val guess = guessInput.toIntOrNull()
+    var numberOfGuesses by remember { mutableStateOf(0) }
+    var correctGuesses by remember { mutableStateOf(0) }
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -102,6 +104,7 @@ fun NumberGuessingGameLayout() {
             Button(
                 onClick = {
                     message = if (guess != null) {
+                        numberOfGuesses++
                         when {
                             guess < randomNumber.value -> {
                                 if (guess < randomNumber.value - 50) {
@@ -119,6 +122,7 @@ fun NumberGuessingGameLayout() {
                             }
                             else -> {
                                 isGameOver = true
+                                correctGuesses++
                                 "Congratulations! You guessed it!"
                             }
                         }
@@ -130,8 +134,8 @@ fun NumberGuessingGameLayout() {
                     .padding(bottom = 16.dp)
                     .size(width = 200.dp, height = 60.dp),
                 colors = ButtonDefaults.buttonColors(
-                    contentColor = Color.White, // Text color
-                    containerColor = Color(0xFFFF9000)// Background color
+                    contentColor = Color.White,
+                    containerColor = Color(0xFFFF9000)
                 )
             ) {
                 Text(text = stringResource(R.string.check_guess),
@@ -151,7 +155,17 @@ fun NumberGuessingGameLayout() {
                         randomNumber.value = Random.nextInt(1, 1001)
                     },
                     title = { Text(text = "Congratulations!") },
-                    text = { Text(text = "You guessed it!") },
+                    text = {
+                        Text(
+                            text = "You guessed it in $numberOfGuesses guesses. " +
+                                    "\nYou have guessed it correctly.",
+                            style = TextStyle(
+                                fontSize = 20.sp,
+                                textAlign = TextAlign.Center
+                            ),
+                            modifier = Modifier.padding(bottom = 16.dp).align(alignment = Alignment.CenterHorizontally),
+                        )
+                    },
                     confirmButton = {
                         Button(
                             onClick = {
@@ -159,6 +173,7 @@ fun NumberGuessingGameLayout() {
                                 guessInput = ""
                                 message = ""
                                 randomNumber.value = Random.nextInt(1, 1001)
+                                numberOfGuesses = 0
                             },
                             modifier = Modifier.fillMaxWidth()
                         ) {
@@ -171,8 +186,11 @@ fun NumberGuessingGameLayout() {
                 text = message,
                 style = TextStyle(
                     fontSize = 24.sp,
-                    color = Color.White
-                )
+                    color = Color.White,
+                    textAlign = TextAlign.Center
+                ),
+                modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
+
 
             )
             Spacer(modifier = Modifier.height(150.dp))
