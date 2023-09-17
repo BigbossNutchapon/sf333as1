@@ -3,4 +3,5 @@
     <string name="guess_number">Guess the Number</string>
     <string name="check_guess">Check Guess</string>
     <string name="enter_guess">Enter your guess:</string>
+    <string name="detail">Try to guess the number \nI\'m thinking of from 1-1000!</string>
 </resources>
