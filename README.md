@@ -10,6 +10,9 @@ This Android application is a straightforward number guessing game built with Ko
 ## Video Demo
 
 You can watch a video demo of the game [here](https://github.com/BigbossNutchapon/sf333as1/assets/88434297/b83177a1-557b-4f8a-af76-6ecb47a4e4a1).
+Video demo
+
+https://github.com/BigbossNutchapon/sf333as1/assets/88434297/b83177a1-557b-4f8a-af76-6ecb47a4e4a1
 
 ## Picture Demo
 ![pic_demo](https://github.com/BigbossNutchapon/sf333as1/assets/88434297/809c7a8d-aa09-4942-abd9-37d0de0ce331)
