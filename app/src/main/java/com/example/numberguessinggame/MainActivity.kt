@@ -54,7 +54,6 @@ fun NumberGuessingGameLayout() {
     val randomNumber = remember { mutableStateOf(Random.nextInt(1, 1001)) }
     val guess = guessInput.toIntOrNull()
     var numberOfGuesses by remember { mutableStateOf(0) }
-    var correctGuesses by remember { mutableStateOf(0) }
 
     Box(
         modifier = Modifier.fillMaxSize()
